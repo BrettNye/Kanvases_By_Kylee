@@ -18,13 +18,13 @@ session_start();
                     <button id="send-btn" type="submit"  name="send_email">Send Email</button> 
             </form>
         </div>
-<?php
-    $to = "nyesoftwaretesting@gmail.com";
-    $subject = "Question Inquiry";
-    $message = $_POST['name'] . " " . $_POST['description'];
-    $headers = "From: " . $_POST['email'];
-    mail($to, $subject, $message, $headers);
-?>
+        <?php
+            $to = "nyetestingsoftware@gmail.com";
+            $subject = "Question Inquiry";
+            $message = $_POST['name'] . " " . $_POST['description'];
+            $headers = "From: " . $_POST['email'];
+            mail($to, $subject, $message, $headers);
+        ?>
         <div id="rotating-images">
             <h1>Pieces from the Past</h1>
             <div class="images">
@@ -32,8 +32,8 @@ session_start();
                     <div class="carousel-cell"><img class="carousel-cell-image" src="../Images/Koi.jpg"/></div>
                     <div class="carousel-cell"><img class="carousel-cell-image" src="../Images/Peacock.jpg"/></div>
                     <div class="carousel-cell"><img class="carousel-cell-image" src="../Images/Giraffe.jpg"/></div>
-                    <div class="carousel-cell"></div>
-                    <div class="carousel-cell"></div>
+                    <div class="carousel-cell"><img class="carousel-cell-image" src="../Images/Goldfish.jpg"/></div>
+                    <div class="carousel-cell"><img class="carousel-cell-image" src="../Images/Cherry_Blossom.jpg"/></div>
                 </div>
             </div>
         </div>
