@@ -1,0 +1,843 @@
+    html{
+        scroll-behavior: smooth;
+        width: 100%;
+        height: 100%;
+        width: calc(var(--vw, 1vw)*100);
+        height: calc(var(--vh, 1vh)*100);
+        margin: 0;
+    }
+
+
+    body{
+        background-size:cover;
+        background-position: 0% 0%;
+        background-repeat: no-repeat;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        height: 100vh;
+        font-size: 16px;
+        width: 100%;
+        background-color: white;
+    }
+
+    @media only screen and (max-width: 1230px) {
+
+    body{
+        width: calc(var(--vw, 1vw)*100);
+        height: calc(var(--vh, 1vh)*100);
+        overflow: scroll;
+        width: 100vw;
+        background-position: center top;
+        background-size: 100vw 100vh;
+        background-attachment: scroll;
+    }
+
+    ::-webkit-scrollbar{
+        width: 0px;
+        height: 0px;
+        background-color: transparent;
+    }
+
+    #main-nav{
+        border-radius: none;
+        width: 100%;
+        width: 100vw;
+        height: 125px;
+        display: flex;
+        flex-direction: row;
+        z-index: 3;
+        position: fixed;
+        background-color: black;
+    } 
+
+    #menus{
+        display:flex;
+        height: 125px;
+        width: 75px;
+        position: absolute;
+        left:15px;
+        top: 45px;
+    }
+
+    .menu-enter{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        height:35px;
+        width: 35px;
+        transition: all 300ms ease-in;
+        position: absolute;
+        z-index: 5;
+    }
+
+    
+
+    #nav-footer:hover .options-circle{
+        transition-duration: 500ms;
+    }
+
+    .hamburger{
+        width: 5px;
+        height: 5px;
+        background-color: white;
+        margin: 3px;
+        transition: all 500ms ease-in;
+    }   
+
+    #nav-items{
+        position: relative;
+        height: 100%;
+        color:white;
+        display: none;
+        z-index: 0;
+        width: 100%;
+        margin-left: 20px;
+    }
+
+    #nav-items ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    #nav-items ul li{
+        width: 100%;
+        width: 100vw;
+        list-style-type: none;
+        text-align: center;
+        white-space: nowrap;
+        margin-left: -40px;
+    }
+
+    #nav-items a{
+        color:white;
+        cursor: pointer;
+    }
+
+    #nav-items a:hover{
+        text-decoration: none;
+    }
+
+    #nav-items li:hover, #other li:hover{
+        transform: scale(1.5);
+    }
+
+    #footer-items{
+        position: relative;
+        height: 95%;
+        color: white;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        z-index: 0;
+        display: none;
+        font-size: .5em;
+        padding-top: 20%;
+        padding-bottom: 50px;
+    }
+
+    #subscribe{
+        margin-bottom: 25vh;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        padding-top: 6vh;
+    }
+
+    #subscribe #offer{
+        font-size: 1em;
+        margin-bottom: 2vh;
+    }
+
+    #subscribe form{
+        display: block;
+        justify-content: right;
+        text-align: right;
+        width: 100%;
+    }
+
+    #subscribe input, #subscribe button{
+        color: black;
+        width: 100%;;
+    }
+
+    #subscribe-btn{
+        margin-top: 5%;
+        border:black;
+    }
+
+    #other{
+        margin-top: 5vh;
+        text-align: center;
+    }
+
+    #other ul{
+        list-style-type: none;
+        padding: 0;
+    }
+
+    #other ul li{
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    #other ul li a{
+        color: white;
+        text-decoration: none;
+    }
+
+    #footer-items p{
+        font-size:.7em;
+        margin-top: 6vh;
+    }
+
+    #logo{
+        padding: 0;
+        height: 100%;
+        width: 100vw;
+        font-family: 'Sacramento', cursive;
+        font-size: 1.5em;
+    }
+
+    #logo-link{
+        height: 100%;
+    }
+
+    #logo-info{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        padding-top: 5px;
+    }
+
+    #logo-link:hover{
+        text-decoration: none;
+    }
+
+    #nav-body{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 28pt;
+        width: 100%;
+        height: 100%;
+        
+    }
+
+    #nav-footer{
+        height:125px;
+        width: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    #options{
+        position:absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 75px;
+        height: 100%;
+        transition: all 500ms ease-in;
+    }
+
+    .options-circle{
+        background-color: white;
+        width: 5px;
+        height: 5px;
+        margin: 3px;
+        border-radius: 5px;
+        transition: all 500ms ease-in;
+    }
+
+    #social{
+        position: absolute;
+        display: none;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        bottom: 8vh;
+        font-size: 1.5em;
+        left: 0;
+    }
+
+    #social a i{
+        z-index: 6;
+        margin-left: 7vw;
+        margin-right: 7vw;
+    }
+
+    .fa-facebook-f{
+        color:#4267B2;
+    }
+
+    .fa-instagram{
+        color: #DD2A7B;
+    }
+
+    .fa-youtube{
+        color: #FF0000;
+    }
+
+    .fa-etsy{
+        color:#F56400;
+    }
+
+    .fa-pinterest{
+        color: #BD081C;
+    }
+
+    #info-strip{
+        width: 100vw;
+        height:22vh;
+        background-color: rgba(1,1,1,.85);
+        position: absolute;
+        left:0;
+        top: 35%;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #call-to-action{
+        color:white;
+        font-size: 22pt;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header{
+        top: 0;
+        position: absolute;
+    }
+
+    #contact-btn{
+        border: black;
+        width: 25%;;
+    }
+
+    #page-link-two{
+        display: none;
+    }
+
+    .fas{
+        font-size: 45px;
+        color: rgba(255,255,255,.8);
+    }
+
+    #name{
+        display: none;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 125px;
+        padding-top: 15px;
+    }
+
+    #name h4{
+        font-family: 'Sacramento', cursive;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    #about-me{
+        height: 90vh;
+        top:100vh;
+        width: 100%;
+        width: 100vw;
+        width: calc(var(--vw, 1vw)*100);
+        padding: 0;
+        margin: 0;
+        position: relative;
+        background: white;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        z-index: 0;
+    }
+
+    #me-info{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 60%;
+        z-index: 2;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #me-info h2{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #me-info p{
+        word-wrap: break-word;
+        width: 80%;
+    }
+
+    #me-info hr{
+        max-width:80%;
+        border-color: black;
+    }
+
+    .main-box{
+        width:100%;
+        height: 100%;;
+        display: flex;
+        justify-content: center;
+        z-index: 4;
+    }
+
+    .img-box{
+        width:100%;
+        height:50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #profile-pic{
+        height: 35vh;
+        border-radius: 100%;
+        z-index: 3;
+    }
+
+    .sticky{
+        position: fixed;
+        top: 0;
+        height: 100%;
+    }
+}
+
+    @media only screen and (min-width: 1230px) {
+
+    #menus{
+        display:flex;
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+
+    .menu-enter{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width:35px;
+        transition: all 500ms ease-in;
+    }
+
+    .menu-enter:hover, #nav-footer:hover{
+        transform: scale(1.5);
+        transition-duration: 500ms;
+    }
+
+    .menu-enter:hover .hamburger{
+        transition-duration: 500ms;
+    }
+
+    #nav-footer:hover .options-circle{
+        transition-duration: 500ms;
+    }
+
+    .hamburger{
+        width: 5px;
+        height: 5px;
+        background-color: white;
+        margin: 3px;
+        transition: all 500ms ease-in;
+    }
+
+    #main-nav{
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        border-radius: none;
+        width: 75px;
+        height: 101vh;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        z-index: 3;
+        position: fixed;
+        background-color: black;
+    }    
+
+    #nav-items{
+        text-decoration: none;
+        position: relative;
+        height: 100%;
+        color:white;
+        display: none;
+        z-index: 0;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    #nav-items ul li{
+        list-style-type: none;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    #nav-items a{
+        color:white;
+        cursor: pointer;
+    }
+
+    #nav-items a:hover{
+        text-decoration: none;
+    }
+
+    #nav-items li:hover, #other li:hover{
+        transform: scale(1.5);
+    }
+
+    #footer-items{
+        position: relative;
+        height: 100%;
+        color: white;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        z-index: 0;
+        display: none;
+        font-size: .5em;
+    }
+
+    #subscribe{
+        margin-bottom: 25vh;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        padding-top: 6vh;
+    }
+
+    #subscribe #offer{
+        font-size: 1em;
+        margin-bottom: 2vh;
+    }
+
+    #subscribe form{
+        display: block;
+        justify-content: right;
+        text-align: right;
+        width: 100%;
+    }
+
+    #subscribe input, #subscribe button{
+        color: black;
+        width: 100%;;
+    }
+
+    #subscribe-btn{
+        margin-top: 5%;
+        border:black;
+    }
+
+    #other{
+        margin-top: 12vh;
+        text-align: center;
+    }
+
+    #other ul{
+        list-style-type: none;
+        padding: 0;
+    }
+
+    #other ul li{
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    #other ul li a{
+        color: white;
+        text-decoration: none;
+    }
+
+    #footer-items p{
+        font-size:.7em;
+        margin-top: 6vh;
+    }
+
+    #logo{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Sacramento', cursive;
+        font-size: 1.5em;
+        line-height: 50px;
+    }
+
+    #logo-link:hover{
+        text-decoration: none;
+    }
+
+    #nav-body{
+        font-size: 28pt;
+    }
+
+    #nav-footer{
+        transition: all 500ms ease-in;
+        width: 75px
+    }
+
+    #options{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 30px;
+    }
+
+    .options-circle{
+        background-color: white;
+        width: 5px;
+        height: 5px;
+        margin: 3px;
+        border-radius: 5px;
+        transition: all 500ms ease-in;
+    }
+
+    #social{
+        position: absolute;
+        display: none;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 25vw;
+        justify-content: center;
+        align-items: center;
+        bottom: 5.3vh;
+        font-size: 1.5em;
+    }
+
+    #social a i{
+        z-index: 6;
+        margin-left: 1.6vw;
+        margin-right: 1.6vw;
+    }
+
+    .fa-facebook-f{
+        color:#4267B2;
+    }
+
+    .fa-instagram{
+        color: #DD2A7B;
+    }
+
+    .fa-youtube{
+        color: #FF0000;
+    }
+
+    .fa-etsy{
+        color:#F56400;
+    }
+
+    .fa-pinterest{
+        color: #BD081C;
+    }
+
+    #info-strip{
+        width: 97vw;
+        height:20vh;
+        margin-left: -35px;
+        background-color: rgba(1,1,1,.65);
+        position: absolute;
+        left: 100px;
+        margin-top: 20vh;
+        z-index: 0;
+    }
+
+    #call-to-action{
+        color:white;
+        font-size: 32pt;
+        padding: 25px 0 5px 25vw
+    }
+
+    header{
+        top: 0;
+        position: absolute;
+    }
+
+    #contact-btn{
+        border: black;
+    }
+
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 0;
+        right: 0;
+        width: 100vw;
+        height: 5vh;
+        position: absolute;
+        z-index: 0;
+        background-color: rgba(1,1,1,.5);
+        margin-bottom: 0;
+        transition: all 500ms linear;
+    }
+
+    #page-link-two{
+        z-index: 8;
+        width: 100vw;
+        height: 5vh;
+        right: 0;
+        position: absolute;
+        background-color: rgba(1,1,1,.5);
+        transition: all 500ms linear;
+    }
+
+    #page-link-two:hover{
+        text-decoration: none;
+        height: 7vh;
+        transition-duration: 500ms;
+    }
+
+    .home-link{
+        height: 100%;
+        width: 100vw;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-link i{
+        transition: all 600ms linear;
+    }
+
+    .home-link:hover i{
+        color: rgba(255,255,255,1);
+        transform: scale(1.5);
+        transition-duration: 600ms;
+    }
+
+    
+
+    footer:hover{
+        height: 7vh;
+        transition-duration: 500ms;
+    }
+
+    footer i{
+        transition: all 600ms linear;
+    }
+
+    footer:hover i{
+        color: rgba(255,255,255,1);
+        transform: scale(1.5);
+        transition-duration: 600ms;
+    }
+
+    .fas{
+        font-size: 45px;
+        color: rgba(255,255,255,.8);
+    }
+
+    #name{
+        display: none;
+        position: absolute;
+        top: 2.5vh;
+        z-index: -1;
+        width: 25vw;
+        justify-content: center;
+        padding-left: 25px;
+    }
+
+    #name h4{
+        font-family: 'Sacramento', cursive;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    #about-me{
+        height: 100vh;
+        position: relative;
+        top:100%;
+        background: white;
+        display: flex;
+        flex-direction: row;
+        padding-left: 85px;
+        z-index: 0;
+    }
+
+    #me-info{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        max-height: 65%;
+        z-index: 2;
+        text-align: left;
+        justify-content: left;
+        align-items: left;
+        border-radius: 15px;
+    }
+
+    #me-info p, #me-info h2{
+        word-wrap: break-word;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #me-info p{
+        padding-top: 15px;
+    }
+
+    #me-info hr{
+        max-width:50%;
+        border-color: black;
+        margin: 0;
+        margin-left: 15px;
+    }
+
+    .main-box{
+        width:65%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 4;
+    }
+
+    .img-box{
+        width:35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #profile-pic{
+        width: 60%;
+        border-radius: 100%;
+        z-index: 3;
+    }
+
+    .sticky{
+        position: fixed;
+        top: 0;
+        height: 100%;
+    }
+    }
+
