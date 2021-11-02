@@ -8,7 +8,7 @@ var backgroundLG = [
 var backgroundSM = [
     "../Images/Cherry_Blossom.jpg",
     "../Images/KoiVertical.jpg",
-    "../Images/Goldfish.jpg"
+    "../Images/Goldfishopt.jpg"
 ]
 
 if($(window).width() >= 1230){
